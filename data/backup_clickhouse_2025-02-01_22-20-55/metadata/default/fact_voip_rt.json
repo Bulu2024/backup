@@ -1,0 +1,8 @@
+{
+ "table": "fact_voip_rt",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.fact_voip_rt UUID '78a8e41c-239e-46f9-bb14-fcb787e93d53' (`subscriber_key` String, `start_time` DateTime, `end_time` DateTime, `int_ipv4` IPv4, `ext_ipv4` IPv4, `app_key` LowCardinality(String), `uli` String, `volume_in` Int64, `volume_out` Int64, `conndr_record_type` Int8, `match_score` Int64) ENGINE = Distributed('cluster_analytics', 'default', 'fact_voip_rt_local', rand())",
+ "size": null,
+ "metadata_only": true
+}

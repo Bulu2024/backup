@@ -1,0 +1,9 @@
+{
+ "table": "dim_app_groups_local",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.dim_app_groups_local UUID '946f1e0f-ddae-48b2-beec-a5a6b9a9d95c' (`app_key` String, `parent_app` String, `app_key_new` String, `app_key_aggregated` String, `app_group_key` String) ENGINE = MergeTree ORDER BY app_key SETTINGS index_granularity = 8192",
+ "size": null,
+ "total_bytes": 34785,
+ "metadata_only": true
+}

@@ -1,0 +1,8 @@
+{
+ "table": "fact_voip_rt_mv",
+ "database": "default",
+ "parts": null,
+ "query": "ATTACH MATERIALIZED VIEW default.fact_voip_rt_mv UUID 'f4e06e27-9e04-4423-a236-9f1d8eb1b6be' TO default.fact_voip_rt_local (`subscriber_key` String, `start_time` DateTime, `end_time` DateTime, `int_ipv4` IPv4, `ext_ipv4` IPv4, `app_key` LowCardinality(String), `uli` String, `volume_in` UInt64, `volume_out` UInt64, `conndr_record_type` UInt8, `match_score` Float64) AS SELECT rt.subscriber_key, rt.start_time, rt.end_time, rt.int_ipv4, rt.ext_ipv4, rt.app_key, rt.uli, rt.volume_in, rt.volume_out, rt.conndr_record_type, if(rt.volume_in = 0, 0, floor((rt.volume_out / rt.volume_in) * 100)) AS match_score FROM default.fact_rt_local AS rt INNER JOIN default.dim_voip_apps_local AS voip ON 1 = 1 WHERE rt.app_key LIKE voip.app_key",
+ "size": null,
+ "metadata_only": true
+}

@@ -1,0 +1,9 @@
+{
+ "table": "fact_enforced_5min_local",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.fact_enforced_5min_local UUID '22b43255-2c46-4e20-bcc5-dfecc3b29478' (`sg_name` LowCardinality(String), `start_time_5min` DateTime, `int_ipv4` IPv4, `app_key` LowCardinality(String), `line` LowCardinality(String), `pipe` LowCardinality(String), `vc` LowCardinality(String), `tether_indication` LowCardinality(String), `app_group_key` LowCardinality(String), `subscriber_key` String, `volume_in` UInt64, `volume_out` UInt64, `degrade_volume_in` UInt64, `degrade_volume_out` UInt64, `drop_connections` UInt64, `bandwidth_in` Float64 DEFAULT toUInt64((volume_in * 8) / 300), `bandwidth_out` Float64 DEFAULT toUInt64((volume_out * 8) / 300)) ENGINE = MergeTree PARTITION BY toStartOfHour(start_time_5min) ORDER BY (start_time_5min, app_key) SETTINGS index_granularity = 8192",
+ "size": null,
+ "total_bytes": 9716189,
+ "metadata_only": true
+}

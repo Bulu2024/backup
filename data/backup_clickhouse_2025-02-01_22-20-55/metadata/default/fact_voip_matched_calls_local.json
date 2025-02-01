@@ -1,0 +1,9 @@
+{
+ "table": "fact_voip_matched_calls_local",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.fact_voip_matched_calls_local UUID '0af5413a-3f6a-4e41-adb3-590433754142' (`subscriber_key_a` String, `subscriber_key_b` String, `int_ipv4_a` String, `int_ipv4_b` String, `uli_a` String, `uli_b` String, `start_time` DateTime, `end_time` DateTime, `duration` UInt64, `volume_out` UInt64, `volume_in` UInt64, `app_key` String) ENGINE = MergeTree ORDER BY start_time SETTINGS index_granularity = 8192",
+ "size": null,
+ "total_bytes": 319075,
+ "metadata_only": true
+}

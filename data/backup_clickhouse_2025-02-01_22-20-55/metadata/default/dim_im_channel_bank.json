@@ -1,0 +1,8 @@
+{
+ "table": "dim_im_channel_bank",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.dim_im_channel_bank UUID 'eb06e73a-f4e5-4c71-bfbc-38ccf11decd8' (`app_key` String, `entity_type` String, `public_private` String, `entity_name` String, `entity_link` String) ENGINE = ReplacingMergeTree PARTITION BY entity_link ORDER BY entity_link SETTINGS index_granularity = 8192",
+ "size": null,
+ "metadata_only": true
+}

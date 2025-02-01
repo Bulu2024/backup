@@ -1,0 +1,9 @@
+{
+ "table": "dim_subscribers_local",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.dim_subscribers_local UUID '364f34bf-ac8b-41d1-b45d-7e166a1c7cfb' (`subscriber_key` String, `_version` UInt64, `subscriber_gender` String, `subscriber_location` String, `subscriber_name` String, `subscriber_year_of_birth` Int32, `operator_name` String, `home_city` String, `home_region` String, `business_residential_ind` String) ENGINE = ReplacingMergeTree(_version) ORDER BY subscriber_key SETTINGS index_granularity = 8192",
+ "size": null,
+ "total_bytes": 755113,
+ "metadata_only": true
+}
