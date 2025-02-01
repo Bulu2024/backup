@@ -1,18 +1,18 @@
 #!/bin/bash
 
 DATE=$(date +'%Y-%m-%d_%H-%M-%S')
-SRC_DB="/data/repository/db/backup/backup_clickhouse_${DATE}"
+SRC_DB="/data/repository/db/backup/${DATE}_backup_clickhouse"
 SRC_SW="/opt/analytics"
-DEST="/root/backup_analytics/data/backup_clickhouse_${DATE}"
+DEST="/root/backup_analytics/data/${DATE}_backup_clickhouse"
 
 # Clickhouse
-clickhouse-backup create --config /etc/clickhouse-backup/config.yml --schema "backup_clickhouse_${DATE}"
+clickhouse-backup create --config /etc/clickhouse-backup/config.yml --schema "${DATE}_backup_clickhouse"
 cp -r "${SRC_DB}" "${DEST}"
 
 # App
 SRC_SW="/opt/analytics"
 DATE=$(date +'%Y-%m-%d_%H-%M-%S')
-ARCHIVE="/root/backup_analytics/data/analytics_app_backup_${DATE}.tar.gz"
+ARCHIVE="/root/backup_analytics/data/${DATE}_analytics_app_backup.tar.gz"
 export GZIP=-9
 tar -czvf "$ARCHIVE" \
     --exclude='.git' \

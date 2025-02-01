@@ -1,0 +1,9 @@
+{
+ "table": "fact_agg_hour_local",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.fact_agg_hour_local UUID 'f982fe99-f456-4749-8b31-7a44070975a6' (`subscriber_key` String, `start_time_1hour` DateTime, `int_ipv4` IPv4, `app_key` String, `uli` String, `volume_in` UInt64, `volume_out` UInt64) ENGINE = MergeTree PARTITION BY toStartOfDay(start_time_1hour) ORDER BY (start_time_1hour, subscriber_key, app_key, int_ipv4, uli) TTL start_time_1hour + toIntervalDay(30) SETTINGS index_granularity = 8192",
+ "size": null,
+ "total_bytes": 250948702,
+ "metadata_only": true
+}
