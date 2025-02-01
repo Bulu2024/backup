@@ -1,8 +1,0 @@
-{
- "table": "dim_subscribers",
- "database": "default",
- "parts": null,
- "query": "CREATE VIEW default.dim_subscribers UUID '66436b23-da52-41ef-be7d-70ed0e9dae8c' (`subscriber_key` String, `subscriber_gender` String, `subscriber_location` String, `subscriber_name` String, `subscriber_year_of_birth` Int32, `operator_name` String, `home_city` String, `home_region` String, `business_residential_ind` String) AS SELECT subscriber_key, any(subscriber_gender) AS subscriber_gender, any(subscriber_location) AS subscriber_location, any(subscriber_name) AS subscriber_name, any(subscriber_year_of_birth) AS subscriber_year_of_birth, any(operator_name) AS operator_name, any(home_city) AS home_city, any(home_region) AS home_region, any(business_residential_ind) AS business_residential_ind FROM cluster('cluster_analytics', 'default.dim_subscribers_local') GROUP BY subscriber_key",
- "size": null,
- "metadata_only": true
-}
