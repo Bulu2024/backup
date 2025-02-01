@@ -7,7 +7,8 @@ DEST="/root/backup_analytics/data/${DATE}_backup_clickhouse"
 
 # Clickhouse
 clickhouse-backup create --config /etc/clickhouse-backup/config.yml --schema "${DATE}_backup_clickhouse"
-cp -r "${SRC_DB}" "${DEST}"
+#cp -r "${SRC_DB}" "${DEST}"
+tar -czvf "/root/backup_analytics/data/${DATE}_backup_clickhouse.tar.gz" "${SRC_DB}"
 
 # App
 SRC_SW="/opt/analytics"
