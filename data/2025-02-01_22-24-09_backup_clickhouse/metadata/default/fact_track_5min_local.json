@@ -1,9 +1,0 @@
-{
- "table": "fact_track_5min_local",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.fact_track_5min_local UUID '6a4d9a37-a2ae-43d7-ad46-1dc2c4c79e4a' (`subscriber_key` String, `start_time_5min` DateTime, `app_key` String, `uli` String, `volume_in` UInt64, `volume_out` UInt64) ENGINE = ReplacingMergeTree(volume_in) PARTITION BY toStartOfHour(start_time_5min) ORDER BY (start_time_5min, subscriber_key) SETTINGS index_granularity = 8192",
- "size": null,
- "total_bytes": 103862957,
- "metadata_only": true
-}

@@ -1,9 +1,0 @@
-{
- "table": "dim_snd_apps_local",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.dim_snd_apps_local UUID 'ffee16c8-dd85-431f-aad1-37b59c2e7e45' (`app_key` String, `app_description_key` String, `version_index` UInt64) ENGINE = ReplacingMergeTree(version_index) ORDER BY app_key SETTINGS index_granularity = 8192",
- "size": null,
- "total_bytes": 600,
- "metadata_only": true
-}

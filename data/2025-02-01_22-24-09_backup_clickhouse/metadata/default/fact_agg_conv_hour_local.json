@@ -1,9 +1,0 @@
-{
- "table": "fact_agg_conv_hour_local",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.fact_agg_conv_hour_local UUID 'd756f4be-8350-4b8f-b5d7-f3f6cf46426b' (`sg_name` LowCardinality(String), `start_time_1hour` DateTime, `int_ipv4` IPv4, `app_key` LowCardinality(String), `line` LowCardinality(String), `pipe` LowCardinality(String), `vc` LowCardinality(String), `app_group_key` LowCardinality(String), `subscriber_key` String, `volume_in` UInt64, `volume_out` UInt64, `degrade_volume_in` UInt64, `degrade_volume_out` UInt64, `drop_connections` UInt64, `bandwidth_in` Float64, `bandwidth_out` Float64) ENGINE = MergeTree PARTITION BY toStartOfHour(start_time_1hour) ORDER BY (start_time_1hour, app_key) SETTINGS index_granularity = 8192",
- "size": null,
- "total_bytes": 215755618,
- "metadata_only": true
-}

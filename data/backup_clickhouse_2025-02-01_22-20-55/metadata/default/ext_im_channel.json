@@ -1,9 +1,0 @@
-{
- "table": "ext_im_channel",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.ext_im_channel UUID '596b0b4b-36c2-4a1c-a9f3-2e45a32a51ab' (`app_key` String, `entity_type` String, `public_private` String, `entity_name` String, `entity_username` String, `entity_username_id` String, `entity_link` String, `msisdn_of_monitor_user` String, `timestamp` DateTime, `message_type` String, `size` UInt64, `text_size` UInt64, `text_content` String, `message_id` String, `forwarded_from_message_id` String, `forwarded_from_channel` String, `via_bot` String, `edit_date` DateTime, `members_count` UInt64) ENGINE = ReplacingMergeTree(timestamp) PARTITION BY entity_name ORDER BY (entity_name, entity_link, message_id, timestamp) SETTINGS index_granularity = 8192",
- "size": null,
- "total_bytes": 12371,
- "metadata_only": true
-}

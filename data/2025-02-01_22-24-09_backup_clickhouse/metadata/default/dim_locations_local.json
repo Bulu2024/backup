@@ -1,9 +1,0 @@
-{
- "table": "dim_locations_local",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.dim_locations_local UUID '694a327f-3e23-4442-9e01-3188d8da609c' (`uli` String, `network_gen_type` String, `latitude` Float64, `longitude` Float64, `cell_region` String, `cell_city` String, `cell_zone` String, `cell_name` String, `operator_internal_id` String, `azimut` Int32) ENGINE = MergeTree ORDER BY uli SETTINGS index_granularity = 8192",
- "size": null,
- "total_bytes": 25904,
- "metadata_only": true
-}

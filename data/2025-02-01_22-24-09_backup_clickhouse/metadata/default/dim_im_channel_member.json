@@ -1,9 +1,0 @@
-{
- "table": "dim_im_channel_member",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.dim_im_channel_member UUID '3387bb5e-2ad2-4c33-917e-ff345831b587' (`app_key` String, `entity_type` String, `public_private` String, `entity_name` String, `entity_username` String, `entity_username_id` String, `entity_link` String, `last_updated` DateTime, `subscriber_key` String, `subscriber_type` String, `score` UInt64) ENGINE = ReplacingMergeTree PARTITION BY entity_link ORDER BY (subscriber_key, entity_link, subscriber_type) SETTINGS index_granularity = 8192",
- "size": null,
- "total_bytes": 1819,
- "metadata_only": true
-}

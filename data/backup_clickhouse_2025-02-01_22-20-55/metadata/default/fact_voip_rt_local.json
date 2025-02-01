@@ -1,9 +1,0 @@
-{
- "table": "fact_voip_rt_local",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.fact_voip_rt_local UUID '198fd768-b251-408f-9bea-82e2e5c3025a' (`subscriber_key` String, `start_time` DateTime, `end_time` DateTime, `int_ipv4` IPv4, `ext_ipv4` IPv4, `app_key` LowCardinality(String), `uli` String, `volume_in` Int64, `volume_out` Int64, `conndr_record_type` Int8, `match_score` Int64) ENGINE = MergeTree ORDER BY (start_time, app_key) TTL start_time + toIntervalHour(2) SETTINGS index_granularity = 8192",
- "size": null,
- "total_bytes": 5456,
- "metadata_only": true
-}

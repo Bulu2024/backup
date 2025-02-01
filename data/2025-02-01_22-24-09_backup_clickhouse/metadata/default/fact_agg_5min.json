@@ -1,8 +1,0 @@
-{
- "table": "fact_agg_5min",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.fact_agg_5min UUID 'a1112a5d-253f-4077-9abc-deb809b68367' (`subscriber_key` String, `start_time_5min` DateTime, `end_time_5min` DateTime, `int_ipv4` IPv4, `app_key` String, `uli` String, `volume_in` UInt64, `volume_out` UInt64) ENGINE = Distributed('cluster_analytics', 'default', 'fact_agg_5min_local', intHash64(start_time_5min))",
- "size": null,
- "metadata_only": true
-}

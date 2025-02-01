@@ -1,8 +1,0 @@
-{
- "table": "fact_rt",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.fact_rt UUID '47f71581-3f88-4038-b51c-507bce0691b3' (`subscriber_key` String, `start_time` DateTime, `end_time` DateTime, `int_ipv4` IPv4, `ext_ipv4` IPv4, `app_key` LowCardinality(String), `uli` String, `request_host` String, `volume_in` UInt64, `volume_out` UInt64, `conndr_record_type` UInt8, `IMEITAC` Int64, `IMSI` Int64, `IMEISV` Int64, `sg_name` LowCardinality(String)) ENGINE = Distributed('cluster_analytics', 'default', 'fact_rt_local', intHash64(start_time))",
- "size": null,
- "metadata_only": true
-}

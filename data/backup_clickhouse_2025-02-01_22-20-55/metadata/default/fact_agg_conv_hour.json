@@ -1,8 +1,0 @@
-{
- "table": "fact_agg_conv_hour",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.fact_agg_conv_hour UUID '26228f76-d675-434f-bdc3-1aac11f75a60' (`sg_name` LowCardinality(String), `start_time_1hour` DateTime, `int_ipv4` IPv4, `app_key` LowCardinality(String), `line` LowCardinality(String), `pipe` LowCardinality(String), `vc` LowCardinality(String), `app_group_key` LowCardinality(String), `subscriber_key` String, `volume_in` UInt64, `volume_out` UInt64, `degrade_volume_in` UInt64, `degrade_volume_out` UInt64, `drop_connections` UInt64, `bandwidth_in` Float64, `bandwidth_out` Float64) ENGINE = Distributed('cluster_analytics', 'default', 'fact_agg_conv_hour_local', intHash64(start_time_1hour))",
- "size": null,
- "metadata_only": true
-}
