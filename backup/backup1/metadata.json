@@ -1,0 +1,170 @@
+{
+	"backup_name": "backup1",
+	"disks": {
+		"default": "/data/repository/db/"
+	},
+	"disk_types": {
+		"default": "local"
+	},
+	"version": "2.6.5",
+	"creation_date": "2025-02-01T19:57:37.878235138Z",
+	"tags": "regular",
+	"clickhouse_version": "v24.12.3.47-stable",
+	"metadata_size": 24135,
+	"rbac_size": 646,
+	"databases": [
+		{
+			"name": "default",
+			"engine": "Atomic",
+			"query": "CREATE DATABASE default\nENGINE = Atomic"
+		}
+	],
+	"tables": [
+		{
+			"database": "default",
+			"table": "fact_conv_5min_local"
+		},
+		{
+			"database": "default",
+			"table": "fact_rt_local"
+		},
+		{
+			"database": "default",
+			"table": "fact_agg_5min_local"
+		},
+		{
+			"database": "default",
+			"table": "fact_agg_hour_local"
+		},
+		{
+			"database": "default",
+			"table": "fact_agg_conv_hour_local"
+		},
+		{
+			"database": "default",
+			"table": "fact_track_5min_local"
+		},
+		{
+			"database": "default",
+			"table": "fact_snd_rt_local"
+		},
+		{
+			"database": "default",
+			"table": "fact_enforced_5min_local"
+		},
+		{
+			"database": "default",
+			"table": "dim_asn"
+		},
+		{
+			"database": "default",
+			"table": "dim_subscribers_local"
+		},
+		{
+			"database": "default",
+			"table": "fact_voip_matched_calls_local"
+		},
+		{
+			"database": "default",
+			"table": "dim_app_groups_local"
+		},
+		{
+			"database": "default",
+			"table": "dim_locations_local"
+		},
+		{
+			"database": "default",
+			"table": "ext_im_channel"
+		},
+		{
+			"database": "default",
+			"table": "fact_voip_rt_local"
+		},
+		{
+			"database": "default",
+			"table": "dim_im_channel_member"
+		},
+		{
+			"database": "default",
+			"table": "dim_snd_apps_local"
+		},
+		{
+			"database": "default",
+			"table": "dim_voip_apps_local"
+		},
+		{
+			"database": "default",
+			"table": "fact_agg_hour"
+		},
+		{
+			"database": "default",
+			"table": "fact_agg_5min_mv"
+		},
+		{
+			"database": "default",
+			"table": "fact_conv_5min"
+		},
+		{
+			"database": "default",
+			"table": "fact_agg_5min"
+		},
+		{
+			"database": "default",
+			"table": "fact_enforced_5min"
+		},
+		{
+			"database": "default",
+			"table": "dim_subscribers_mv"
+		},
+		{
+			"database": "default",
+			"table": "fact_enforced_5min_mv"
+		},
+		{
+			"database": "default",
+			"table": "fact_rt"
+		},
+		{
+			"database": "default",
+			"table": "dim_subscribers"
+		},
+		{
+			"database": "default",
+			"table": "fact_snd_rt"
+		},
+		{
+			"database": "default",
+			"table": "dim_im_channel_bank"
+		},
+		{
+			"database": "default",
+			"table": "fact_snd_rt_mv"
+		},
+		{
+			"database": "default",
+			"table": "fact_track_5min"
+		},
+		{
+			"database": "default",
+			"table": "fact_voip_matched_calls"
+		},
+		{
+			"database": "default",
+			"table": "fact_voip_rt"
+		},
+		{
+			"database": "default",
+			"table": "fact_voip_rt_mv"
+		},
+		{
+			"database": "default",
+			"table": "mv_fact_track_5min_local"
+		},
+		{
+			"database": "default",
+			"table": "fact_agg_conv_hour"
+		}
+	],
+	"functions": [],
+	"data_format": ""
+}

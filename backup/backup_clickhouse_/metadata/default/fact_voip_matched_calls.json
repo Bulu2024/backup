@@ -1,0 +1,8 @@
+{
+ "table": "fact_voip_matched_calls",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.fact_voip_matched_calls UUID 'fbc89c6f-5d05-435d-838c-a60e85792ffb' (`subscriber_key_a` String, `subscriber_key_b` String, `int_ipv4_a` String, `int_ipv4_b` String, `uli_a` String, `uli_b` String, `start_time` DateTime, `end_time` DateTime, `duration` UInt64, `volume_out` UInt64, `volume_in` UInt64, `app_key` String) ENGINE = Distributed('cluster_analytics', 'default', 'fact_voip_matched_calls_local', rand())",
+ "size": null,
+ "metadata_only": true
+}

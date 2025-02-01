@@ -1,0 +1,8 @@
+{
+ "table": "fact_track_5min",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.fact_track_5min UUID '7da54f10-3868-4a0d-941f-f2d22b5da9f9' (`subscriber_key` String, `start_time_5min` DateTime, `app_key` String, `uli` String, `volume_in` UInt64, `volume_out` UInt64) ENGINE = Distributed('cluster_analytics', 'default', 'fact_track_5min_local', intHash64(start_time_5min))",
+ "size": null,
+ "metadata_only": true
+}

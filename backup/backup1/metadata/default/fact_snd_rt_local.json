@@ -1,0 +1,9 @@
+{
+ "table": "fact_snd_rt_local",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.fact_snd_rt_local UUID '81e38f35-dd3d-4d39-81b2-097719063de2' (`subscriber_key` String, `start_time` DateTime, `end_time` DateTime, `int_ipv4` IPv4, `ext_ipv4` IPv4, `app_key` LowCardinality(String), `uli` LowCardinality(String), `request_host` String, `volume_in` Int64, `volume_out` Int64, `conndr_record_type` Int8, `sg_name` LowCardinality(String), `snd_score` Int64) ENGINE = MergeTree PARTITION BY toStartOfHour(start_time) ORDER BY (start_time, app_key) TTL start_time + toIntervalDay(1) SETTINGS index_granularity = 8192",
+ "size": null,
+ "total_bytes": 59450072,
+ "metadata_only": true
+}

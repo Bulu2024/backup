@@ -1,0 +1,9 @@
+{
+ "table": "dim_asn",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.dim_asn UUID 'c0455634-a5a4-48c4-af7e-16d2297cb265' (`asn_number` UInt64, `asn_name` String, `country_code` String, `hosting_server` String) ENGINE = MergeTree ORDER BY asn_number SETTINGS index_granularity = 8192",
+ "size": null,
+ "total_bytes": 2296251,
+ "metadata_only": true
+}

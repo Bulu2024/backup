@@ -1,0 +1,8 @@
+{
+ "table": "dim_subscribers_mv",
+ "database": "default",
+ "parts": null,
+ "query": "ATTACH MATERIALIZED VIEW default.dim_subscribers_mv UUID '0e34e2ec-abb5-407f-8f60-0119968475ab' TO default.dim_subscribers_local (`subscriber_key` String, `_version` UInt64, `subscriber_gender` String, `subscriber_location` String, `subscriber_name` String, `subscriber_year_of_birth` Int32, `operator_name` String, `home_city` String, `home_region` String, `business_residential_ind` String) AS SELECT subscriber_key, CAST(now64(), 'UInt64') AS _version, '' AS subscriber_gender, '' AS subscriber_location, '' AS subscriber_name, toInt32(0) AS subscriber_year_of_birth, '' AS operator_name, '' AS home_city, '' AS home_region, '' AS business_residential_ind FROM default.fact_agg_hour_local",
+ "size": null,
+ "metadata_only": true
+}
