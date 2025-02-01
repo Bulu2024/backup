@@ -1,0 +1,8 @@
+{
+ "table": "fact_agg_hour",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.fact_agg_hour UUID 'ebfda867-ad8f-4c87-877c-a8fa05f728df' (`subscriber_key` String, `start_time_1hour` DateTime, `int_ipv4` IPv4, `app_key` String, `uli` String, `volume_in` UInt64, `volume_out` UInt64) ENGINE = Distributed('cluster_analytics', 'default', 'fact_agg_hour_local', intHash64(start_time_1hour))",
+ "size": null,
+ "metadata_only": true
+}

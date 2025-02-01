@@ -1,0 +1,8 @@
+{
+ "table": "fact_snd_rt",
+ "database": "default",
+ "parts": null,
+ "query": "CREATE TABLE default.fact_snd_rt UUID 'f8219b2c-3671-41cc-b848-c1bf11bf1e1b' (`subscriber_key` String, `start_time` DateTime, `end_time` DateTime, `int_ipv4` IPv4, `ext_ipv4` IPv4, `app_key` LowCardinality(String), `uli` LowCardinality(String), `request_host` String, `volume_in` Int64, `volume_out` Int64, `conndr_record_type` Int8, `sg_name` LowCardinality(String), `snd_score` Int64) ENGINE = Distributed('cluster_analytics', 'default', 'fact_snd_rt_local', intHash64(start_time))",
+ "size": null,
+ "metadata_only": true
+}
