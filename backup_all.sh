@@ -1,9 +1,9 @@
 #!/bin/bash
 
+DATE=$(date +'%Y-%m-%d_%H-%M-%S')
+SCHEMA="backup_clickhouse_${DATE}"
 SRC="/data/repository/db/backup/${SCHEMA}"
 DEST="/root/backup_analytics/${SCHEMA}"
-SCHEMA="backup_clickhouse_${DATE}"
-DATE=$(date +'%Y-%m-%d_%H-%M-%S')
 
 clickhouse-backup create --config /etc/clickhouse-backup/config.yml --schema "${SCHEMA}"
 cp -r "${SRC}" "${DEST}"

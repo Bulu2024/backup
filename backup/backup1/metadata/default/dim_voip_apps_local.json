@@ -1,9 +1,0 @@
-{
- "table": "dim_voip_apps_local",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.dim_voip_apps_local UUID '1f0e264b-7545-46fc-84a5-e0d184bf62b0' (`app_key` String, `app_description_key` String, `date_added` Date) ENGINE = MergeTree ORDER BY app_key SETTINGS index_granularity = 8192",
- "size": null,
- "total_bytes": 495,
- "metadata_only": true
-}

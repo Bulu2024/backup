@@ -1,8 +1,0 @@
-{
- "table": "fact_snd_rt_mv",
- "database": "default",
- "parts": null,
- "query": "ATTACH MATERIALIZED VIEW default.fact_snd_rt_mv UUID 'b40d7e7b-3830-4766-929f-57e86a828210' TO default.fact_snd_rt_local (`subscriber_key` String, `start_time` DateTime, `end_time` DateTime, `int_ipv4` IPv4, `ext_ipv4` IPv4, `app_key` LowCardinality(String), `uli` String, `request_host` String, `volume_in` UInt64, `volume_out` UInt64, `conndr_record_type` UInt8, `sg_name` LowCardinality(String), `snd_score` Float64) AS SELECT rt.subscriber_key, rt.start_time, rt.end_time, rt.int_ipv4, rt.ext_ipv4, rt.app_key, rt.uli, rt.request_host, rt.volume_in, rt.volume_out, rt.conndr_record_type, rt.sg_name, if(rt.volume_in = 0, 0, floor((rt.volume_out / rt.volume_in) * 100)) AS snd_score FROM default.fact_rt_local AS rt INNER JOIN default.dim_snd_apps_local AS snd ON 1 = 1 WHERE rt.app_key LIKE snd.app_key",
- "size": null,
- "metadata_only": true
-}

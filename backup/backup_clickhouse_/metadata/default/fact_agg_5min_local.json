@@ -1,9 +1,0 @@
-{
- "table": "fact_agg_5min_local",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.fact_agg_5min_local UUID '81fd179d-6cd0-4f84-8305-bef27f79086d' (`subscriber_key` String, `start_time_5min` DateTime, `end_time_5min` DateTime, `int_ipv4` IPv4, `app_key` String, `uli` String, `volume_in` UInt64, `volume_out` UInt64) ENGINE = ReplacingMergeTree(start_time_5min) PARTITION BY toStartOfHour(start_time_5min) ORDER BY (start_time_5min, subscriber_key, app_key) TTL start_time_5min + toIntervalDay(5) SETTINGS index_granularity = 8192",
- "size": null,
- "total_bytes": 770251057,
- "metadata_only": true
-}

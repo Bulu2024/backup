@@ -1,8 +1,0 @@
-{
- "table": "mv_fact_track_5min_local",
- "database": "default",
- "parts": null,
- "query": "ATTACH MATERIALIZED VIEW default.mv_fact_track_5min_local UUID '26bad140-d5bc-458f-af03-acc567f203b4' TO default.fact_track_5min_local (`subscriber_key` String, `start_time_5min` DateTime, `app_key` String, `uli` String, `volume_in` UInt64, `volume_out` UInt64) AS SELECT subscriber_key, toStartOfFiveMinute(start_time) AS start_time_5min, argMax(app_key, fact_rt_local.volume_in) AS app_key, argMax(uli, fact_rt_local.volume_in) AS uli, max(fact_rt_local.volume_in) AS volume_in, argMax(volume_out, fact_rt_local.volume_in) AS volume_out FROM default.fact_rt_local GROUP BY subscriber_key, start_time_5min",
- "size": null,
- "metadata_only": true
-}

@@ -1,8 +1,0 @@
-{
- "table": "fact_enforced_5min",
- "database": "default",
- "parts": null,
- "query": "CREATE TABLE default.fact_enforced_5min UUID '9f088c06-609e-4e9d-9419-e73f98050ecf' (`sg_name` LowCardinality(String), `start_time_5min` DateTime, `int_ipv4` IPv4, `app_key` LowCardinality(String), `line` LowCardinality(String), `pipe` LowCardinality(String), `vc` LowCardinality(String), `tether_indication` LowCardinality(String), `app_group_key` LowCardinality(String), `subscriber_key` String, `volume_in` UInt64, `volume_out` UInt64, `degrade_volume_in` UInt64, `degrade_volume_out` UInt64, `drop_connections` UInt64, `bandwidth_in` Float64 DEFAULT toUInt64((volume_in * 8) / 300), `bandwidth_out` Float64 DEFAULT toUInt64((volume_out * 8) / 300)) ENGINE = Distributed('cluster_analytics', 'default', 'fact_enforced_5min_local', intHash64(start_time_5min))",
- "size": null,
- "metadata_only": true
-}
