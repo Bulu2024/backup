@@ -30,3 +30,17 @@ cd "$DEST.." || { echo "Directory not found"; exit 1; }
 git add .
 git commit -m "Backup ${DATE}"
 git push origin main
+
+# Tableau
+HOST=$(hostname)
+DATE_TIME=$(date +%Y%m%d_%H%M%S)
+LOCAL_BACKUP_DIR="/data/repository/backup"
+REMOTE_DEST="root@3.1.1.2:/data/backup"
+BACKUP_FILE="${LOCAL_BACKUP_DIR}/${HOST}_${DATE_TIME}_server_backup.tsbak"
+CONFIG_FILE="${LOCAL_BACKUP_DIR}/${HOST}_${DATE_TIME}_server_config.json"
+
+tsm maintenance backup -f "${BACKUP_FILE}" --ignore-prompt
+tsm settings export -f "${CONFIG_FILE}"
+
+scp "${BACKUP_FILE}" "${REMOTE_DEST}"
+scp "${CONFIG_FILE}" "${REMOTE_DEST}"
