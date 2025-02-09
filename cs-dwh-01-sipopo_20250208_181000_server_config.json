@@ -1,0 +1,267 @@
+{
+  "configKeys" : {
+    "config.version" : 27,
+    "k8s.under.tsm" : "false",
+    "features.TabadminService" : true,
+    "tableau_projects.language" : "en",
+    "gateway.trusted_hosts" : "",
+    "gateway.trusted" : "",
+    "install.firewall.gatewayhole" : true,
+    "gateway.port" : 8085,
+    "shareproductusagedata.enabled" : false,
+    "wgserver.domain.ldap.bind" : "simple",
+    "wgserver.domain.port" : 0,
+    "wgserver.domain.allow_insecure_connection" : false,
+    "wgserver.domain.directoryservice.type" : "activedirectory",
+    "wgserver.domain.ldap.starttls.enabled" : true,
+    "wgserver.domain.ssl_port" : 0,
+    "service.windows.local_service_user" : "NT AUTHORITY\\LocalService",
+    "service.windows.network_service_user" : "NT AUTHORITY\\NetworkService",
+    "service.windows.privileged_user" : ".\\LocalSystem",
+    "install.component.samples" : true,
+    "wgserver.authentication.legacy_identity_mode.enabled" : false,
+    "indexandsearchserver.security.nodes_dn" : "CN=node.IndexAndSearchServer",
+    "indexandsearchserver.security.admin_dn" : "CN=admin.IndexAndSearchServer",
+    "vizqlserver.trustedticket.try_count" : 10,
+    "vizqlserver.trustedticket.use_deprecated_v2_tickets" : false,
+    "vizqlserver.trustedticket.timeout_in_seconds" : 180,
+    "vizqlserver.trustedticket.token_length" : 24,
+    "wgserver.trusted_hosts" : "10.100.0.105,10.100.0.108,10.100.0.117,127.0.0.1,localhost,10.100.0.121",
+    "vizqlserver.trustedticket.use_deprecated_9digit_token" : false,
+    "vizqlserver.trustedticket.log_level" : "info",
+    "vizportal.rest_api.cors.allow_origin" : "http://localhost",
+    "basefilepath.backuprestore" : "/data/repository/backup"
+  },
+  "topologyVersion" : {
+    "nodes" : {
+      "node1" : {
+        "services" : {
+          "backgrounder" : {
+            "instances" : [ {
+              "instanceId" : "1"
+            }, {
+              "instanceId" : "0"
+            } ]
+          },
+          "licenseservice" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "clientfileservice" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "vizqlserver" : {
+            "instances" : [ {
+              "instanceId" : "2"
+            }, {
+              "instanceId" : "0"
+            }, {
+              "instanceId" : "3"
+            }, {
+              "instanceId" : "1"
+            } ]
+          },
+          "vizdataservice" : {
+            "instances" : [ {
+              "instanceId" : "1"
+            }, {
+              "instanceId" : "0"
+            } ]
+          },
+          "activemqserver" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "vizportal" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "dataserver" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            }, {
+              "instanceId" : "1"
+            } ]
+          },
+          "appzookeeper" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "databasemaintenance" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "filestore" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "siteimportexport" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "tdsservice" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "vizdatanativeservice" : {
+            "instances" : [ {
+              "instanceId" : "1"
+            }, {
+              "instanceId" : "0"
+            } ]
+          },
+          "clustercontroller" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "backuprestore" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "noninteractive" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "cacheserver" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            }, {
+              "instanceId" : "1"
+            } ]
+          },
+          "tabadminagent" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "activationservice" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "flowprocessor" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "authnservice" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "floweditor" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "datastories" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "tdsnativeservice" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "flowminerva" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "hyper" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "collections" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "contentexploration" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "indexandsearchserver" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "tabadmincontroller" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "pgsql" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "allegro" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "webhooks" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "interactive" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "gateway" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "analyticsextensions" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          },
+          "apigateway" : {
+            "instances" : [ {
+              "instanceId" : "0"
+            } ]
+          }
+        }
+      }
+    }
+  },
+  "scheduleJobs" : [ {
+    "jobTimeout" : -1,
+    "scheduleJobId" : 1,
+    "jobType" : "GenerateBackupJob",
+    "createdAt" : 1739033591833,
+    "scheduleName" : "DailyBackup",
+    "scheduleInfoType" : {
+      "recurrenceInterval" : "DAILY",
+      "timeToRun" : "04:40",
+      "recurence" : [ ]
+    },
+    "nextRunAt" : 1739072400000,
+    "suspended" : false,
+    "timesRan" : 0,
+    "previousJobIds" : [ ],
+    "jobArgs" : "{\"forSnapshotBackup\":false,\"forSnapshotBackupWithPg\":false,\"multithreaded\":false,\"node\":\"node1\",\"origin\":\"COMMAND_LINE\",\"overrideDiskSpaceCheck\":false,\"postgresOnly\":false,\"singleNode\":true,\"skipCompression\":false,\"skipVerification\":false,\"writePath\":\"server_backup-2025-02-08.tsbak\"}"
+  } ],
+  "fulfillmentIds" : [ ]
+}
