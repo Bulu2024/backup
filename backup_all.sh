@@ -11,7 +11,6 @@ tar -czvf "${DEST}${DATE}_backup_clickhouse.tar.gz" "${SRC_DB}"
 
 # App
 SRC_SW="/opt/analytics"
-DATE=$(date +'%Y-%m-%d_%H-%M-%S')
 ARCHIVE="${DEST}${DATE}_analytics_app_backup.tar.gz"
 export GZIP=-9
 tar -czvf "$ARCHIVE" \
@@ -33,11 +32,10 @@ git push origin main
 
 # Tableau
 HOST=$(hostname)
-DATE_TIME=$(date +%Y%m%d_%H%M%S)
 LOCAL_BACKUP_DIR="/data/repository/backup"
 REMOTE_DEST="root@3.1.1.2:/data/backup"
-BACKUP_FILE="${HOST}_${DATE_TIME}_server_backup.tsbak"
-CONFIG_FILE="${LOCAL_BACKUP_DIR}/${HOST}_${DATE_TIME}_server_config.json"
+BACKUP_FILE="${HOST}_${DATE}_server_backup.tsbak"
+CONFIG_FILE="${LOCAL_BACKUP_DIR}/${HOST}_${DATE}_server_config.json"
 
 tsm maintenance backup -f "${BACKUP_FILE}" --ignore-prompt
 tsm settings export -f "${CONFIG_FILE}"
