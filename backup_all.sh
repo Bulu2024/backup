@@ -37,8 +37,8 @@ REMOTE_DEST="root@3.1.1.2:/data/backup"
 BACKUP_FILE="${HOST}_${DATE}_server_backup.tsbak"
 CONFIG_FILE="${LOCAL_BACKUP_DIR}/${HOST}_${DATE}_server_config.json"
 
-tsm maintenance backup -f "${BACKUP_FILE}" --ignore-prompt
-tsm settings export -f "${CONFIG_FILE}"
+/opt/tableau/tableau_server/packages/bin.20242.24.1213.1118/tsm maintenance backup -f "${BACKUP_FILE}" --ignore-prompt
+/opt/tableau/tableau_server/packages/bin.20242.24.1213.1118/tsm settings export -f "${CONFIG_FILE}"
 
 scp "${LOCAL_BACKUP_DIR}/${BACKUP_FILE}" "${REMOTE_DEST}"
 scp "${CONFIG_FILE}" "${REMOTE_DEST}"
