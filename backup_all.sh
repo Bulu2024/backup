@@ -42,3 +42,8 @@ CONFIG_FILE="${LOCAL_BACKUP_DIR}/${HOST}_${DATE}_server_config.json"
 
 scp "${LOCAL_BACKUP_DIR}/${BACKUP_FILE}" "${REMOTE_DEST}"
 scp "${CONFIG_FILE}" "${REMOTE_DEST}"
+
+REMOTE_DEST="root@192.168.99.5:/srv/backup"
+scp "${LOCAL_BACKUP_DIR}/${BACKUP_FILE}" "${REMOTE_DEST}"
+scp "${CONFIG_FILE}" "${REMOTE_DEST}"
+
