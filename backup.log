@@ -8190,3 +8190,26 @@ Configuration file written to /data/repository/backup/cs-dwh-01-sipopo_2025-04-0
 ./.gitignore
 ./log/
 Backup complete: /srv/backup/backup_data/2025-04-05_05-22-01_analytics_app_backup.tar.gz
+[main dec0966] Backup 2025-04-05_05-22-01
+ 3 files changed, 203 insertions(+)
+ create mode 100644 backup_data/2025-04-05_05-22-01_analytics_app_backup.tar.gz
+ create mode 100644 backup_data/2025-04-05_05-22-01_backup_clickhouse.tar.gz
+The last successful run of GenerateBackupJob took 2 minute(s).
+
+Job id is '135', timeout is 1440 minutes.
+7% - Starting the Active Repository instance, File Store, and Cluster Controller.
+14% - Waiting for the Active Repository, File Store, and Cluster Controller to start.
+Running - Installing backup services.                                     21% - Installing backup services.
+Running - Estimating required disk space.                                         28% - Estimating required disk space.
+35% - Gathering disk space information from all nodes.
+42% - Analyzing disk space information.
+50% - Checking if sufficient disk space is available on all nodes.
+57% - Backing up configuration.
+Running - [Backing up object storage data.] [Backing up database.]                                                                  64% - Backing up object storage data.
+Running - Backing up database.                              71% - Backing up database.
+Running - Assembling the tsbak archive. Processing file 1 of 3013.                                                                  78% - Assembling the tsbak archive.
+85% - Stopping the Active Repository if necessary.
+92% - Waiting for the Active Repository to stop if necessary.
+Running - Uninstalling backup services.                                       100% - Uninstalling backup services.                                    100% - Uninstalling backup services.
+Backup written to '/data/repository/backup/cs-dwh-01-sipopo_2025-04-05_05-22-01_server_backup.tsbak' on the controller node.
+Configuration file written to /data/repository/backup/cs-dwh-01-sipopo_2025-04-05_05-22-01_server_config.json. The configuration file does not include the runas username and password. After importing, these values must be set explicitly.
