@@ -10829,3 +10829,206 @@ Configuration file written to /data/repository/backup/cs-dwh-01-sipopo_2025-04-1
 ./.gitignore
 ./log/
 Backup complete: /srv/backup/backup_data/2025-04-18_05-22-01_analytics_app_backup.tar.gz
+[main 677df76] Backup 2025-04-18_05-22-01
+ 3 files changed, 203 insertions(+)
+ create mode 100644 backup_data/2025-04-18_05-22-01_analytics_app_backup.tar.gz
+ create mode 100644 backup_data/2025-04-18_05-22-01_backup_clickhouse.tar.gz
+The last successful run of GenerateBackupJob took 2 minute(s).
+
+Job id is '188', timeout is 1440 minutes.
+7% - Starting the Active Repository instance, File Store, and Cluster Controller.
+14% - Waiting for the Active Repository, File Store, and Cluster Controller to start.
+Running - Installing backup services.                                     21% - Installing backup services.
+Running - Estimating required disk space.                                         28% - Estimating required disk space.
+35% - Gathering disk space information from all nodes.
+42% - Analyzing disk space information.
+50% - Checking if sufficient disk space is available on all nodes.
+57% - Backing up configuration.
+Running - [Backing up object storage data.] [Backing up database.]                                                                  64% - Backing up object storage data.
+Running - Backing up database.                              71% - Backing up database.
+Running - Assembling the tsbak archive. Processing file 1 of 3140.                                                                  78% - Assembling the tsbak archive.
+85% - Stopping the Active Repository if necessary.
+92% - Waiting for the Active Repository to stop if necessary.
+Running - Uninstalling backup services.                                       100% - Uninstalling backup services.                                    100% - Uninstalling backup services.
+Backup written to '/data/repository/backup/cs-dwh-01-sipopo_2025-04-18_05-22-01_server_backup.tsbak' on the controller node.
+Configuration file written to /data/repository/backup/cs-dwh-01-sipopo_2025-04-18_05-22-01_server_config.json. The configuration file does not include the runas username and password. After importing, these values must be set explicitly.
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/access/
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/access/de495e25-c49a-7fa6-4608-d707038a73b6.sql
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_system_conf.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_rt.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_asn.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_targets_raw.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_voip_matched_calls_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_conv_5min_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_im_channel_member.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_agg_5min.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_subscribers_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/results_snd.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_agg_conv_hour_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dashboard_enforced_apps.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_connections.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/ext_im_channel.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_hdr_5min_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_track_hour_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_enforced_5min.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_track_rt.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_snd_rt.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_conv_5min.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_track_5min_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_targets_mv.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_voip_rt_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_track_5min.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_agg_hdr_day.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_agg_hour_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_targets_view.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_agg_conv_hour.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_voip_rt_mv.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_agg_day_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dashboard_kpi_daily.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_geofence_rules.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_app_groups_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_connections_mv_a_to_b.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/ext_osintindustries_targets_old.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_subscribers.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_rt_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_im_channel_bank.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_voip_matched_calls.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_subscribers_mv.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/superset_data_track.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_conv_5min_local_mv.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_enforced_5min_mv.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_snd_rt_mv.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_agg_day.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_agg_day_mv.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_voip_rt.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_track_rt_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_geofence_activity.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_agg_hour.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_voip_apps_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dashboard_device_kpi.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_agg_hdr_day_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_snd_apps_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_hdr_5min.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_locations_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_agg_5min_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_locations_groups.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/superset_view_locations_fact_dim.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/test.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dashboard_kpi_hourly.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/test_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_locations_subscriber_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_track_hour.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dict_subscriber_to_uli.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_enforced_5min_local.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/dim_targets.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_conv_5min_local_temp.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/superset_view_locations_fact_dim_2.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/ext_osintindustries_targets.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_connections_mv_b_to_a.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_track_trends.json
+/data/repository/db/backup/2025-04-19_05-22-01_backup_clickhouse/metadata/default/fact_snd_rt_local.json
+./
+./bin/
+./bin/.gitattributes
+./bin/.gitignore
+./bin/buckets_clean_old.sh
+./bin/chnl/
+./bin/chnl/build.py
+./bin/chnl/run.py
+./bin/chnl/get.py
+./bin/buckets_loader_hdr.sh
+./bin/agg_to_hours.sh
+./bin/call_match_prod.py
+./bin/clickhouse_connect.py
+./bin/__pycache__/
+./bin/__pycache__/clickhouse_connect.cpython-36.pyc
+./bin/update_dashboard_hourly.py
+./bin/update_dashboard_daily.py
+./bin/get_locations_group.py
+./bin/run_on_all_nodes.sh
+./bin/example_access_to_db.py
+./bin/buckets_loader.sh
+./bin/update_subscribers_details.py
+./bin/agg_to_hours_conv.sh
+./bin/start_analytics.sh
+./bin/agg_location_to_5min.py
+./bin/buckets_loader_uli.sh
+./bin/old/
+./bin/old/_agg_to_track.sh
+./bin/old/dashboard_kpi.py
+./bin/old/update_track_trends.py
+./bin/old/update_dashboard_daily.py
+./bin/old/update_dashboard_daily_2.py
+./bin/old/update_dashboard_daily_3.py
+./bin/old/make_connections.py
+./bin/update_track_trends.py
+./bin/print_stats.sh
+./bin/update_device_kpi.py
+./bin/update_locations_subscribers_table.py
+./bin/.vscode/
+./bin/.vscode/launch.json
+./bin/buckets_keeper.sh
+./bin/agg_hdr_to_days.py
+./bin/stop_analytics.sh
+./bin/buckets_loader_conv.sh
+./bin/agg_location_to_hour.py
+./bin/add_target.py
+./bin/targets_refresh.py
+./bin/update_geofence_activities.py
+./bin/buckets_loader_sdr.sh
+./conf/
+./conf/session_name.session
+./conf/get_tables
+./conf/old/
+./conf/old/load_ttl.sh
+./conf/old/ttl
+./conf/old/ttl_cluster
+./conf/.env.default
+./conf/load_tables_ttl.sh
+./conf/tables_cluster
+./tools/
+./tools/ai/
+./tools/ai/ask_ai_gemini.py
+./tools/ai/gemini_ai.py
+./tools/ai/get_ai_insights.py
+./tools/ai/ref/
+./tools/ai/ai_instructions_cluster.txt
+./tools/ai/ai_instructions_standalone.txt
+./tools/ai/ask_ai_openai.py
+./tools/background/
+./tools/background/convert_conv_to_conndr.py
+./tools/background/generate_background_conndr.py
+./tools/background/modify_uli.py
+./tools/background/split.py
+./tools/backup/
+./tools/backup/backup_tableau.sh
+./tools/backup/buckets_modifier.py
+./tools/backup/buckets_modifier.sh
+./tools/load_table_manually/
+./tools/load_table_manually/dim_app_groups_insert_clean.sql
+./tools/load_table_manually/test.sql
+./tools/load_table_manually/app_groups_csv._csv
+./tools/load_table_manually/dubai_300_locations_coordinates._csv
+./tools/load_table_manually/dubai_300_locations_name._csv
+./tools/load_table_manually/load_table.sh
+./tools/load_table_manually/dim_locations_guinea._csv
+./tools/sync_dwh_tables/
+./tools/sync_dwh_tables/copy_from_dwh1_to_dwh2_dwh3.sh
+./tools/sync_dwh_tables/copy_from_dwh1_to_dwh2_dwh3_V2.sh
+./tools/asn/
+./tools/asn/get_asn_list.sh
+./tools/clean_tableau.sh
+./tools/git_all.sh
+./tools/print_fact_tables.py
+./tools/clean_disk_space.sh
+./tools/force_clean_buckets.sh
+./tmp/
+./tmp/downloads/
+./tmp/print_csv.py
+./.gitignore
+./log/
+Backup complete: /srv/backup/backup_data/2025-04-19_05-22-01_analytics_app_backup.tar.gz
